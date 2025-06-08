@@ -372,7 +372,7 @@ $$
 \hat{\theta}^{(n+1)} = \hat{\theta}^{(n)} + a_n \left[ g(y_{\text{obs}}) - g(y^{(n)}) \right]
 $$
 
-> MCMC-MLE for ERGMs uses iterative simulation and stochastic approximation to estimate parameters, as standard likelihood computation is intractable for large networks. The Metropolis-Hastings algorithm is commonly used for proposing new network states, and parameter updates follow a Robbins-Monro or stochastic gradient approach[5][6][8].
+> MCMC-MLE for ERGMs uses iterative simulation and stochastic approximation to estimate parameters, as standard likelihood computation is intractable for large networks. The Metropolis-Hastings algorithm is commonly used for proposing new network states, and parameter updates follow a Robbins-Monro or stochastic gradient approach.
 
 ---
 
@@ -503,19 +503,19 @@ For prediction $\hat{y} = f(x)$, construct prediction intervals:
 **Step 1: Compute non-conformity scores on calibration set**
 
 $$
-R_i = |Y_i - \hat{Y}_i|, \quad i = 1, \ldots, n \tag{53}
+R_i = |Y_i - \hat{Y}_i|, \quad i = 1, \ldots, n 
 $$
 
 **Step 2: Find quantile**
 
 $$
-\hat{q} = \mathrm{Quantile}\left( R_1, \ldots, R_n;\ \frac{\lceil (n + 1)(1 - \alpha) \rceil}{n} \right) \tag{54}
+\hat{q} = \mathrm{Quantile}\left( R_1, \ldots, R_n;\ \frac{\lceil (n + 1)(1 - \alpha) \rceil}{n} \right) 
 $$
 
 **Step 3: Prediction interval**
 
 $$
-C(x) = [\hat{f}(x) - \hat{q},\ \hat{f}(x) + \hat{q}] \tag{55}
+C(x) = [\hat{f}(x) - \hat{q},\ \hat{f}(x) + \hat{q}] 
 $$
 
 **Coverage Guarantee:**  
@@ -604,9 +604,10 @@ $$
   - Store only subset of activations  
   - Recompute during backward pass
 
-- **Mixed Precision Training:** Use FP16 for forward pass, FP32 for gradients  
-  $$
-  \theta_{t+1} = \theta_t - \alpha \cdot \mathrm{FP32}(\nabla_\theta L)
-  $$
+- **Mixed Precision Training:** Use FP16 for forward pass, FP32 for gradients
+
+$$
+\theta_{t+1} = \theta_t - \alpha \cdot \mathrm{FP32}(\nabla_\theta L)
+$$
 
 ---
