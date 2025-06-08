@@ -536,8 +536,9 @@ $$
 \mathrm{Var}\left[ \hat{f}_{\mathrm{bag}}(x) \right] = \frac{1}{B} \mathrm{Var}\left[ \hat{f}(x) \right]
 $$
 
+---
 
-### 9 INTERPRETABILITY AND EXPLAINABILITY
+## 9 INTERPRETABILITY AND EXPLAINABILITY
 ### 9.1 SHAP Values for Feature Attribution
 For prediction $f(x)$, SHAP values satisfy:
 
